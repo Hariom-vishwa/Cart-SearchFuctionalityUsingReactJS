@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+  background-color: aliceblue;
+}
+
+* {
+  box-sizing: border-box;
+  /* border: 1px solid #000; */
+  transition: all 0.3s ease;
+}
+
+h1 {
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.itemsCont {
+  width: 100%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  place-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.item {
+  width: 300px;
+  padding: 10px;
+  background-color: #0000000e;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  border-radius: 20px;
+}
+.item img {
+  width: 280px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.item h2,
+.item h3 {
+  margin: 0;
+}
+
+.item h2 {
+  font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.item h3 {
+  font-size: 15px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.item .nameNcolor,
+.item .sizeNprice {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.viewDetails {
+  text-decoration: none;
+  padding: 5px 20px;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.04) 0px,
+      rgba(0, 0, 0, 0.04) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(135deg, rgb(165, 230, 235), rgb(29, 32, 232));
+  border-radius: 10px;
+  color: white;
+}
+
+.specsCont {
+  margin: 50px auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.leftPart,
+.rightPart {
+  padding: 50px;
+  height: 550px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.leftPart img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.rightPart h1 {
+  margin: 0;
+  color: tomato;
+  padding: 20px;
+  font-size: 29px;
+  border-bottom: 2px solid;
+}
+
+.rightPart p {
+  text-transform: capitalize;
+}
+
+.rightPart .rightSpecs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.Loading {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 40px;
+  animation: Loading 1s ease-in-out 0s infinite;
+}
+
+@keyframes Loading {
+  0% {
+    color: green;
+    transform: translateY(100px);
+  }
+  50% {
+    color: black;
+    transform: translateY(0);
+  }
+  100% {
+    color: green;
+    transform: translateY(100px);
+  }
+}
+
+.cartCont{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  place-items: center;
+  gap: 50px;
+}
+
+
+.cartCont .item{
+  width: 700px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  position: relative;
+}
+
+.cartCont .item .delBtn{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  border: none;
+  background-color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.cartCont .item img{
+  width: 200px;
+  height: 280px;
+}
+
+.cartCont .item .specs{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.cartCont .item .actionBtns{
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.16);
+  gap: 30px;
+}
+
+.cartCont .item button{
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.cartCont .item .buyNow{
+  background-color:springgreen;
+  color: #000;
+}
+
+.cartCont .item .remove{
+  background-color:crimson;
+  color: #fff;
+}
